@@ -21,7 +21,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    #对于每一个admin开头的url django可以找到一个对应的view
     path('admin/', admin.site.urls),
+    path('',include('blog.urls')),
    # path('', views.first_page),
   #  path('blog/', include('blog.urls')),
 ]
